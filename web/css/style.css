@@ -1,0 +1,401 @@
+@charset "utf-8";
+
+html {
+    position: relative;
+    min-height: 100%; /* 保证footer不会无限制的往上跑 */
+}
+
+body {
+    padding-top: 70px; /* 这样主体内容就不会和固定的导航栏产生冲突了 */
+}
+
+.main {
+    max-width: 960px;
+    margin: 0px auto;
+}
+
+.movie-description {
+    width: 220px;
+}
+
+.ticketsTable input {
+    width: 30px;
+}
+
+.contentCenterAlign {
+    text-align: center;
+}
+
+/**********************************login styles**********************************/
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+.form-signin .checkbox {
+    font-weight: normal;
+}
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/**********************************CAROUSEL styles**********************************/
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+    height: 500px;
+    margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+    height: 500px;
+    background-color: #777;
+}
+.carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 500px;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.marketing h2 {
+    font-weight: normal;
+}
+.marketing .col-lg-4 p {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+    margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+
+    /* Navbar positioning foo */
+    .navbar-wrapper {
+        margin-top: 20px;
+    }
+    .navbar-wrapper .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .navbar-wrapper .navbar {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    /* The navbar becomes detached from the top, so we round the corners */
+    .navbar-wrapper .navbar {
+        border-radius: 4px;
+    }
+
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+        margin-bottom: 20px;
+        font-size: 21px;
+        line-height: 1.4;
+    }
+
+    .featurette-heading {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 992px) {
+    .featurette-heading {
+        margin-top: 120px;
+    }
+}
+
+/**********************************footer styles**********************************/
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+    padding: 60px 15px 0;
+}
+.container .text-muted {
+    margin: 20px 0;
+}
+
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+code {
+    font-size: 80%;
+}
+
+/**********************************sidebar table styles**********************************/
+
+#sidebar,
+#sidebar ul,
+#sidebar ul li,
+#sidebar ul ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#sidebar ul {
+    position: relative;
+    z-index: 597;
+    float: left;
+}
+#sidebar ul li {
+    float: left;
+    min-height: 1px;
+    line-height: 1em;
+    vertical-align: middle;
+}
+#sidebar ul li.hover,
+#sidebar ul li:hover {
+    position: relative;
+    z-index: 599;
+    cursor: default;
+}
+#sidebar ul ul {
+    margin-top: 1px;
+    visibility: hidden;
+    position: absolute;
+    top: 1px;
+    left: 99%;
+    z-index: 598;
+    width: 100%;
+}
+#sidebar ul ul li {
+    float: none;
+}
+#sidebar ul ul ul {
+    top: 1px;
+    left: 99%;
+}
+#sidebar ul li:hover > ul {
+    visibility: visible;
+}
+#sidebar ul li {
+    float: none;
+}
+#sidebar ul ul li {
+    font-weight: normal;
+}
+/* Custom CSS Styles */
+#sidebar {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    width: 200px;
+}
+#sidebar ul a,
+#sidebar ul a:link,
+#sidebar ul a:visited {
+    display: block;
+    color: #848889;
+    text-decoration: none;
+    font-weight: 300;
+}
+#sidebar > ul {
+    float: none;
+}
+#sidebar ul {
+    background: #fff;
+}
+#sidebar > ul > li {
+    border-left: 3px solid #d7d8da;
+}
+#sidebar > ul > li > a {
+    padding: 10px 20px;
+}
+#sidebar > ul > li:hover {
+    border-left: 3px solid #3dbd99;
+}
+#sidebar ul li:hover > a {
+    color: #3dbd99;
+}
+#sidebar > ul > li:hover {
+    background: #f6f6f6;
+}
+/* Sub Menu */
+#sidebar ul ul a:link,
+#sidebar ul ul a:visited {
+    font-weight: 400;
+    font-size: 14px;
+}
+#sidebar ul ul {
+    width: 180px;
+    background: none;
+    border-left: 20px solid transparent;
+}
+#sidebar ul ul a {
+    padding: 8px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+#sidebar ul ul li {
+    padding: 0 20px;
+    background: #fff;
+}
+#sidebar ul ul li:last-child {
+    border-bottom: 3px solid #d7d8da;
+    padding-bottom: 10px;
+}
+#sidebar ul ul li:first-child {
+    padding-top: 10px;
+}
+#sidebar ul ul li:last-child > a {
+    border-bottom: none;
+}
+#sidebar ul ul li:first-child:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -20px;
+    top: 13px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid #fff;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+}
+
+/**********************************graduateTopic table styles**********************************/
+
+.graduate-topic-table {
+    margin: 10px auto;
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc;
+    -moz-box-shadow: 0 1px 1px #ccc;
+    box-shadow: 0 1px 1px #ccc;
+}
+
+.graduate-topic-table tr:hover {
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.graduate-topic-table td, .graduate-topic-table th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.graduate-topic-table th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+.graduate-topic-table td:first-child, .graduate-topic-table th:first-child {
+    border-left: none;
+}
+
+.graduate-topic-table th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.graduate-topic-table th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.graduate-topic-table th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.graduate-topic-table tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.graduate-topic-table tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}

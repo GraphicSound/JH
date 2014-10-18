@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
+
+    <package name="common" namespace="/" extends="struts-default">
+
+        <default-interceptor-ref name="defaultStack"/>
+        <global-results>
+            <result name="login" type="redirectAction">login</result>
+        </global-results>
+
+        <action name="securityImage" class="securityImageAction">
+            <result name="success" type="stream">
+                <param name="contentType">image/jpeg</param>
+                <param name="inputName">imageStream</param>
+                <param name="bufferSize">2048</param>
+            </result>
+        </action>
+
+        <action name="index" class="indexAction">
+            <result name="success">/WEB-INF/jspf/user/index.jsp</result>
+        </action>
+
+        <action name="login" class="loginAction" method="login">
+            <result name="input">/WEB-INF/jspf/user/login.jsp</result>
+            <result name="success" type="redirect">/</result> <!-- 使用redirect, 不然url是login.action, 还是返回到首页 -->
+        </action>
+
+        <action name="logout" class="loginAction" method="logout">
+            <result name="success" type="redirect">/</result>
+        </action>
+
+        <action name="showTickets" class="showTicketsAction">
+            <result name="success">/WEB-INF/jspf/user/showTickets.jsp</result>
+        </action>
+
+        <action name="checkout" class="shoppingCartAction" method="checkout">
+            <result name="success">/WEB-INF/jspf/user/checkout.jsp</result>
+        </action>
+
+        <action name="checkoutAdmitted" class="shoppingCartAction" method="checkoutAdmitted">
+            <result name="success">/WEB-INF/jspf/user/checkoutAdmitted.jsp</result>
+        </action>
+    </package>
+</struts>
