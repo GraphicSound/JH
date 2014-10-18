@@ -32,10 +32,10 @@
     <!-- Bootstrap core JavaScript
         ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="<c:url value="/js/jquery/jquery-2.1.1.js"/> "></script>
-    <script src="<c:url value="/js/jquery/jquery.cookie.js"/> "></script>
+    <script src="<c:url value="/jquery/jquery-2.1.1.js"/> "></script>
+    <script src="<c:url value="/jquery/jquery.cookie.js"/> "></script>
     <script src="<c:url value="/js/json2.js"/> "></script>
-    <script src="<c:url value="/js/com.jiahua.js"/> "></script>
+    <script src="<c:url value="/js/jiahua.js"/> "></script>
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="<c:url value="/bootstrap/bootstrap.min.js"/> "></script>
